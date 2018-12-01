@@ -9,6 +9,8 @@ public class SinglyLinkedListTest<K> {
        linkedList.addFirst(2);
        linkedList.addFirst(3);
        
+       linkedList.addLast(0);
+       linkedList.addLast(-1);
        System.out.println(linkedList);
    }
 }

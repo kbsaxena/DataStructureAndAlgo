@@ -24,6 +24,22 @@ public class SinglyLinkedList<K> {
         }
     }
     
+    public void addLast(K value) {
+        Node<K> lastElement = new Node<>(value);
+        
+        if(size() == 0) {
+            head = lastElement;
+        }
+        else {
+            Node<K> current = head;
+            while(null != current.next) {
+                current = current.next;
+            }
+            current.next = lastElement;
+        }
+    }
+    
+    
     public int size() {
         Node<K> headNode = head;
         int result = 0;
