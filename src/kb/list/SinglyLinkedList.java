@@ -1,7 +1,16 @@
 package kb.list;
 
-public class SinglyLinkedList {
-     
+public class SinglyLinkedList<K> {
+    Node<K> head;
+    
+    public SinglyLinkedList(){
+        head = null;
+    }
+    
+    public Node<K> getHead(){
+        return head;
+    }
+    
 }
 
 class Node<K>{
