@@ -40,6 +40,23 @@ public class SinglyLinkedList<K> {
     }
     
     
+    public void addAtPosition(K value, int position) {
+	    	if(position > size()) {
+	    		System.out.println("Wrong position specified");
+	    	}
+	    	else {
+	    		Node<K> nElement = new Node<>(value);
+	    		Node<K> current = head;
+	    		while(--position >0) {
+	    			//position--;
+	    			current = current.next;
+	    		}
+	    		Node<K> temp = current.next;
+	    		nElement.next = temp;
+	    		current.next = nElement;
+	    	}
+    }
+    
     public int size() {
         Node<K> headNode = head;
         int result = 0;
